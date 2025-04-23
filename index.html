@@ -12,6 +12,9 @@
 </head>
 <body class="home-page">
     <!-- Header Section -->
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+      </div>
     <header>
         <!-- Search Overlay -->
         <!-- <div id="search-overlay" class="search-overlay">
@@ -31,8 +34,12 @@
                     <h1>Dylan Dsouza</h1>
                 </a>
             </div>
-            <nav>
-                <ul>
+
+            <button class="hamburger" id="hamburger">&#9776;</button>
+
+
+            <nav id="navbar">
+                <ul id="nav-links">
                     <li><a href="about.html">About</a></li>
                     <li><a href="data-projects.html">Data Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -65,7 +72,7 @@
                   <h3>Geriasphere – Digital Literacy for Senior Citizens</h3>
                   <p>Developed a website to help middle-aged and senior citizens learn digital skills. Conducted hands-on workshops teaching app usage with video tutorials, promoting digital literacy and empowering older generations.</p>
                   <div class="project-links">
-                    <a href="https://github.com/Geriasphere/geriasphere" class="github-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://github.com/dsouza-dylan/geriasphere" class="github-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://geriasphere.github.io/trialgeriasphere2024/" class="readmore-link" target="_blank">See More →</a>
                   </div>
                 </div>
