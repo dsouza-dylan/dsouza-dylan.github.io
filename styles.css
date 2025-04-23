@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -21,7 +20,6 @@ html, body {
   flex-direction: column;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -45,7 +43,6 @@ p {
   margin-bottom: 15px;
 }
 
-/* Header */
 header {
   width: 100%;
   background-color: #000;
@@ -71,10 +68,9 @@ header {
   cursor: pointer;
   color: #fff;
   padding: 10px;
-  z-index: 10; /* Ensure it's on top of other elements */
+  z-index: 10;
 }
 
-/* Ensure the logo and navigation take the space correctly */
 .logo h1 {
   margin: 0;
   color: white;
@@ -85,7 +81,6 @@ header {
   color: inherit;
 }
 
-/* Navigation */
 #nav-list {
   flex-direction: row;
   list-style: none;
@@ -97,7 +92,7 @@ header {
 }
 
 #nav-list.show {
-  display: block; /* Use block for mobile layout */
+  display: block;
 }
 
 #nav-list li a {
@@ -112,13 +107,10 @@ header {
   color: #ddd;
 }
 
-/* Hide hamburger by default */
 .hamburger {
   display: none;
 }
 
-
-/* Hide nav-list on smaller screens */
 @media (max-width: 800px) {
   #nav-list {
     display: none;
@@ -186,8 +178,6 @@ header {
   color: #ccc;
 }
 
-
-/* Main Section */
 main {
     flex-grow: 1;
     width: 100%;
@@ -201,7 +191,6 @@ main {
     border-radius: 8px;
 }
 
-/* Footer */
 footer {
     width: 100%;
     background-color: #000;
@@ -221,7 +210,6 @@ footer p {
     margin-bottom: 20px;
 }
 
-/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -247,7 +235,6 @@ footer p {
     color: #1a73e8;
 }
 
-/* Photography */
 .photography{
   width: 100%;
   margin: 0 auto;
@@ -276,7 +263,6 @@ footer p {
     transform: scale(1.05);
 }
 
-/* Portfolio */
 .portfolio-item {
     background-color: #fff;
     padding: 20px;
@@ -295,7 +281,6 @@ body {
     flex-grow: 1;
 }
 
-/* Overlay Background - Dark Mode */
 .search-overlay {
     display: none;
     position: fixed;
@@ -307,12 +292,10 @@ body {
     align-items: center;
 }
 
-  /* Show overlay */
 .search-overlay.active {
     display: flex;
   }
 
-  /* Centered input and close */
 .overlay-content {
     display: flex;
     flex-direction: column;
@@ -343,7 +326,6 @@ body {
     border-color: #fff;
 }
 
-/* Position Close Button */
 .close-btn {
     position: absolute;
     top: 1rem;
@@ -361,13 +343,11 @@ body {
     color: #fff;
 }
 
-/* Search Input Container */
 .search-container {
   position: relative;
-  width: 100%; /* 60% of page width */
+  width: 100%;
 }
 
-/* Magnifying Glass Icon */
 .search-icon {
   position: absolute;
   right: 0;
@@ -409,12 +389,10 @@ body {
     font-size: 1.1rem;
 }
 
-/* Target only the home page */
 .home-page main {
-    padding: 0;  /* Reset the padding */
+    padding: 0;
 }
 
-/* Optional: Semi-transparent color overlay */
 .home-page .hero {
     width: 100%;
     height: 100vh;
@@ -433,7 +411,6 @@ body {
     padding: 0;
 }
 
-/* Optional content with overlay (if desired later) */
 .home-page .hero:before {
     content: '';
     position: absolute;
@@ -441,13 +418,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Light dark overlay */
-    z-index: 0; /* Put it behind the content */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
 
-
-
-/* Hero Content */
 .home-page .hero-content {
     max-width: 100%;
     padding: 2rem;
@@ -477,20 +451,19 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Call-to-action Button */
 .home-page .cta-btn {
     display: inline-block;
-    padding: 12px 25px; /* Same padding for all buttons */
+    padding: 12px 25px;
     font-size: 1.1rem;
     background-color: #fff;
     color: #333;
     text-decoration: none;
     border-radius: 5px;
-    margin: 10px; /* Same margin for spacing between buttons */
+    margin: 10px;
     text-align: center;
     transition: background-color 0.3s ease;
-    width: auto; /* Ensures the width is determined by content, not fixed */
-    min-width: 180px; /* Ensures the minimum width of the button stays consistent */
+    width: auto;
+    min-width: 180px;
 }
 
 .home-page .cta-btn:hover {
@@ -499,28 +472,28 @@ body {
 }
 
 .home-page .cta-btn.photography {
-    background-color: #40798c; /* Deep blue-green */
+    background-color: #40798c;
 }
 
 .home-page .cta-btn.blog {
-    background-color: #70a9a1; /* Soft green-blue */
+    background-color: #70a9a1;
 }
 
 .home-page .cta-btn.portfolio {
-    background-color: #9ec1a3; /* Light green */
+    background-color: #9ec1a3;
 }
 
 /* Hover effects */
 .home-page .cta-btn.photography:hover {
-    background-color: #305f6d; /* Dark slate */
+    background-color: #305f6d;
 }
 
 .home-page .cta-btn.blog:hover {
-    background-color: #3e636b; /* Slightly darker green-blue */
+    background-color: #3e636b;
 }
 
 .home-page .cta-btn.portfolio:hover {
-    background-color: #7a9c8c; /* Slightly darker light green */
+    background-color: #7a9c8c;
 }
 
 .home-page .hero-content .fade-in {
@@ -543,7 +516,6 @@ body {
     -webkit-animation: typing 1.8s steps(30) 0.5s forwards, blink 0.75s step-end infinite;
 }
 
-/* Medium screens (tablets, small laptops) */
 @media (max-width: 900px) {
   .home-page .hero {
     height: 60vh;
@@ -571,7 +543,6 @@ body {
   }
 }
 
-/* Small screens (phones) */
 @media (max-width: 600px) {
   .home-page .hero {
     height: 60vh;
@@ -599,8 +570,6 @@ body {
     padding: 2rem 1rem;
   }
 }
-
-
 
 @keyframes typing {
     to {
@@ -630,37 +599,32 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Main Content Sections */
 .main-sections {
-    padding: 3rem 5vw;  /* Adjusted for consistent padding with LHS */
+    padding: 3rem 5vw;
     margin-bottom: 0rem;
     border-top: 2px solid #e0e0e0;
 }
 
-/* Section Titles */
 .main-sections h2 {
     font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
     margin-bottom: 1rem;
 }
 
-/* Paragraphs and content */
 .main-sections p {
     font-family: 'Source Sans Pro', sans-serif;
     max-width: 700px;
     margin: 0 auto;
 }
 
-/* Blog Section */
 .main-sections.blog-section {
-    background-color: #f4f4f4;  /* Light grey background */
+    background-color: #f4f4f4;
     padding: 3rem 5vw;
     margin-bottom: 0rem;
 }
 
-/* Contact Section */
 .main-sections.contact-section {
-    background-color: #f4f4f4;  /* Light grey background */
+    background-color: #f4f4f4;
     padding: 3rem 5vw;
     margin-bottom: 0rem;
 }
@@ -669,7 +633,6 @@ body {
   font-size: 2.2rem;
 }
 
-/* Left: Basic contact info */
 .contact-info {
   flex: 1 1 300px;
   min-width: 300px;
@@ -700,7 +663,6 @@ body {
   text-decoration: none;
 }
 
-/* Form Styling */
 .contact-form .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -738,12 +700,11 @@ body {
 }
 
 .profile-pic {
-    max-width: 100%; /* To make it responsive */
-    height: auto; /* Keep the aspect ratio intact */
-    width: 200px; /* You can set a fixed width */
+    max-width: 100%;
+    height: auto;
+    width: 200px;
 }
 
-/* Blog Section - Full-width layout */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -932,7 +893,6 @@ body {
   object-fit: cover;
 }
 
-/* Responsive Stack for smaller screens */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
@@ -987,9 +947,9 @@ body {
 .project-links {
   margin-top: auto;
   display: flex;
-  justify-content: space-between; /* Spacing between the links */
-  align-items: center; /* Aligns items vertically */
-  padding: 0px; /* Adjust padding as needed */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
 }
 
 .github-link {
@@ -1033,9 +993,9 @@ body {
 .projects-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between the project cards */
-  width: 80%; /* Set width to 80% */
-  margin: 0 auto; /* Center the wrapper horizontally */
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .blog-main {
@@ -1186,7 +1146,7 @@ body {
   }
 
   .about-header {
-    order: -1; /* This pulls the heading above the image */
+    order: -1;
   }
 
   .about-text h2 {
@@ -1202,16 +1162,12 @@ body {
   }
 }
 
-
-
-/* Photography Section */
 .photography-section {
-  background-color: #fff;  /* Light grey background */
+  background-color: #fff;
   padding: 3rem 5vw;
   margin-bottom: 0rem;
 }
 
-/* Grid for Photography Preview */
 .photo-preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1219,7 +1175,6 @@ body {
   margin-top: 1.5rem;
 }
 
-/* Photo Card */
 .photo-card {
   background: #f4f4f4;
   border-radius: 8px;
@@ -1230,12 +1185,10 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Photo Card Hover Effect */
 .photo-card:hover {
   transform: translateY(-5px);
 }
 
-/* Photo Image */
 .photo-image {
   width: 100%;
   height: auto;
@@ -1244,14 +1197,12 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Photo Title */
 .photo-card h3 {
   font-size: 1.5rem;
   margin: 0rem 0;
   margin-bottom: 1rem;
 }
 
-/* Photo Description */
 .photo-card p {
   font-size: 1rem;
   padding-left: 10px;
@@ -1259,7 +1210,6 @@ body {
   color: #555;
 }
 
-/* Link to View Full Photo */
 .photo-card a {
   display: inline-block;
   margin-top: 1rem;
@@ -1268,13 +1218,11 @@ body {
   font-weight: bold;
 }
 
-/* === CONTACT SECTION STYLING === */
-
 .contact-main {
   display: flex;
   justify-content: center;
   padding: 0rem 0rem;
-  background-color: #f4f4f4; /* soft neutral backdrop */
+  background-color: #f4f4f4;
   font-family: 'Source Sans Pro', sans-serif;
   color: #333;
   animation: fadeIn 0.8s ease;
@@ -1361,7 +1309,6 @@ body {
   resize: vertical;
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .contact-wrapper {
     flex-direction: column;
@@ -1451,7 +1398,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 3rem; /* reduced spacing from 6rem to 3rem */
+  gap: 3rem;
   flex-wrap: nowrap;
 }
 
@@ -1480,7 +1427,6 @@ body {
   font-size: 1.5rem;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1492,7 +1438,6 @@ body {
   }
 }
 
-/* Apply to main section of non-home pages */
 .page-fade {
   animation: fadeIn 0.6s ease-out;
 }

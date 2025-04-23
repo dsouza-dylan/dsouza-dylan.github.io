@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.toggle("active");
   });
 
-  // Optional: Close menu when a link is clicked
   document.querySelectorAll(".overlay-menu a").forEach(link => {
     link.addEventListener("click", () => {
       overlay.classList.remove("active");
