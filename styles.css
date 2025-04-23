@@ -852,13 +852,13 @@ body {
 
 @media (max-width: 768px) {
   .blog-image {
-    height: 180px;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .blog-image {
-    height: 160px;
+    height: auto;
   }
 }
 
@@ -1013,7 +1013,6 @@ body {
     height: auto;
     object-fit: cover;
   }
-
 }
 
 .project-info {
