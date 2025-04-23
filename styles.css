@@ -86,7 +86,7 @@ header {
 }
 
 /* Navigation */
-nav ul {
+#nav-list {
   flex-direction: row;
   list-style: none;
   display: flex;
@@ -96,11 +96,11 @@ nav ul {
   align-items: center;
 }
 
-nav ul.show {
+#nav-list.show {
   display: block; /* Use block for mobile layout */
 }
 
-nav ul li a {
+#nav-list li a {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.1rem;
@@ -108,9 +108,84 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+#nav-list li a:hover {
   color: #ddd;
 }
+
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+}
+
+
+/* Hide nav-list on smaller screens */
+@media (max-width: 800px) {
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #nav-list.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+#mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.3s ease;
+}
+
+#mobile-menu-overlay.active {
+  display: flex;
+}
+
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.overlay-menu li {
+  margin: 1rem 0;
+}
+
+.overlay-menu a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.overlay-menu a:hover {
+  color: #ccc;
+}
+
 
 /* Main Section */
 main {
