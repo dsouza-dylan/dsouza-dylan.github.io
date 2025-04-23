@@ -468,49 +468,18 @@ body {
     -webkit-animation: typing 1.8s steps(30) 0.5s forwards, blink 0.75s step-end infinite;
 }
 
+/* Medium screens (tablets, small laptops) */
 @media (max-width: 900px) {
-  .home-page .hero-content {
-    left: 50%;
-    transform: translate(-70%, -50%);
-    text-align: center;
-    width: 50%;
-    padding: 1.5rem;
-    -webkit-transform: translate(-70%, -50%);
-    -moz-transform: translate(-70%, -50%);
-    -ms-transform: translate(-70%, -50%);
-    -o-transform: translate(-70%, -50%);
-}
-
-  .home-page .hero-content h2 {
-    font-size: 1.75rem;
-  }
-
-  .home-page .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .home-page .cta-btn {
-    display: block;
-    margin: 0.5rem auto;
-    width: fit-content;
-  }
-}
-
-@media (max-width: 600px) {
   .home-page .hero-content {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 50%;
+    width: 70%;
     padding: 1.5rem;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
+  }
 
   .home-page .hero-content h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .home-page .hero-content p {
@@ -524,28 +493,24 @@ body {
   }
 }
 
-/* 🛠 Responsive fixes */
-@media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 2.2rem;
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .home-page .hero-content {
+    width: 90%;
+    padding: 1.2rem;
   }
 
-  .hero-content p {
+  .home-page .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-page .hero-content p {
     font-size: 1rem;
   }
 
-  .hero {
-    padding: 2rem 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h2 {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .hero-content p {
+  .home-page .cta-btn {
+    width: 100%;
+    max-width: 220px;
     font-size: 0.95rem;
   }
 
@@ -554,14 +519,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .cta-btn {
-    display: block;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-  }
-}
+
 
 @keyframes typing {
     to {
