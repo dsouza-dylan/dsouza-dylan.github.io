@@ -820,13 +820,20 @@ body {
   border-radius: 12px;
   border: 0px solid #ddd;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   transition: transform 0.2s ease;
   -webkit-transition: transform 0.2s ease;
   -moz-transition: transform 0.2s ease;
   -ms-transition: transform 0.2s ease;
   -o-transition: transform 0.2s ease;
 }
+
 
 .blog-card:hover {
   transform: translateY(-4px);
