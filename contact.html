@@ -85,9 +85,12 @@
             <!-- Only this gets the grey background -->
             <div class="contact-form-section">
               <h2>Send a Message</h2>
-              <p>Have question, want to collaborate, or just say hello? Feel free to reach out!</p>
+              <p>Have a question, want to collaborate, or just say hello? Feel free to reach out!</p>
               <form class="contact-form" action="https://formsubmit.co/dydsouza@ucsd.edu" method="POST">
-                <input type="hidden" name="_next" value="thank-you.html">
+                <!-- Redirect after submission -->
+                <input type="hidden" name="_next" value="https://dsouza-dylan.github.io/thank-you.html">
+
+                <!-- Form Fields -->
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" id="name" name="name" required />
@@ -100,6 +103,7 @@
                   <label for="message">Message</label>
                   <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+                <!-- Submit Button -->
                 <button type="submit">Send Message</button>
               </form>
             </div>
