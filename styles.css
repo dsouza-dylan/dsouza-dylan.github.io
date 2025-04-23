@@ -388,30 +388,6 @@ body {
     -o-transform: translate(-90%, -50%);
 }
 
-@media (max-width: 768px) {
-  .home-page .hero-content {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .home-page .hero-content h2 {
-    font-size: 1.75rem;
-  }
-
-  .home-page .hero-content p {
-    font-size: 1.1rem;
-  }
-
-  .home-page .cta-btn {
-    display: block;
-    margin: 0.5rem auto;
-    width: fit-content;
-  }
-}
-
 .home-page .hero h2 {
     font-size: 3.5rem;
     margin: 0 0 20px;
@@ -490,6 +466,101 @@ body {
     width: 0;
     animation: typing 1.8s steps(30) 0.5s forwards, blink 0.75s step-end infinite;
     -webkit-animation: typing 1.8s steps(30) 0.5s forwards, blink 0.75s step-end infinite;
+}
+
+@media (max-width: 900px) {
+  .home-page .hero-content {
+    left: 50%;
+    transform: translate(-70%, -50%);
+    text-align: center;
+    width: 50%;
+    padding: 1.5rem;
+    -webkit-transform: translate(-70%, -50%);
+    -moz-transform: translate(-70%, -50%);
+    -ms-transform: translate(-70%, -50%);
+    -o-transform: translate(-70%, -50%);
+}
+
+  .home-page .hero-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .home-page .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .home-page .cta-btn {
+    display: block;
+    margin: 0.5rem auto;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-page .hero-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+    padding: 1.5rem;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+  .home-page .hero-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .home-page .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .home-page .cta-btn {
+    display: block;
+    margin: 0.5rem auto;
+    width: fit-content;
+  }
+}
+
+/* 🛠 Responsive fixes */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
 }
 
 @keyframes typing {
