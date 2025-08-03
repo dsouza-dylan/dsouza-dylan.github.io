@@ -11,7 +11,4 @@
 <div align="center">
 
 **Dylan Dsouza: Personal Website**
-
-[⭐ Star this repository](https://github.com/dsouza-dylan/geriasphere) | [🐛 Report Bug](https://github.com/dsouza-dylan/geriasphere/issues) | [💡 Request Feature](https://github.com/dsouza-dylan/geriasphere/issues)
-
 </div>
