@@ -1,6 +1,6 @@
 # Dylan Dsouza: Personal Website
 
-**[Try Geriasphere Live](https://geriasphere.github.io/trialgeriasphere2024/)**
+**[Live Link](https://geriasphere.github.io/trialgeriasphere2024/)**
 
 ## 📝 License
 
