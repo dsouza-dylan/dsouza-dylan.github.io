@@ -2,10 +2,6 @@
 
 **[Live Link](https://geriasphere.github.io/trialgeriasphere2024/)**
 
-## 📞 Contact
-
-**Dylan Dsouza** - *Creator*
-
 - 📧 Email: [dydsouza@ucsd.edu]
 - 🐙 GitHub: [@dsouza-dylan](https://github.com/dsouza-dylan)
 - 💼 LinkedIn: [@dsouza-dylan](https://www.linkedin.com/in/dsouza-dylan/)
