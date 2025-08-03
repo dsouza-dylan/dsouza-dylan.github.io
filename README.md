@@ -1,6 +1,6 @@
 # Dylan Dsouza: Personal Website
 
-**[Live Link](https://geriasphere.github.io/trialgeriasphere2024/)**
+**[Live Link](https://dylandsouza.com/)**
 
 - 📧 Email: [dydsouza@ucsd.edu]
 - 🐙 GitHub: [@dsouza-dylan](https://github.com/dsouza-dylan)
