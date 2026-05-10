@@ -3,21 +3,15 @@ const modal = document.createElement("div");
 modal.id = "photo-modal";
 modal.innerHTML = `
   <button class="modal-close">✕</button>
-  <div class="modal-content">
-    <img class="modal-img" src="" alt="" />
-    <p class="modal-caption"></p>
-  </div>
+  <img class="modal-img" src="" alt="" />
 `;
 document.body.appendChild(modal);
 
 const modalImg = modal.querySelector(".modal-img");
-const modalCaption = modal.querySelector(".modal-caption");
 
-function openModal(src, alt, caption) {
+function openModal(src, alt) {
   modalImg.src = src;
   modalImg.alt = alt;
-  modalCaption.textContent = caption || "";
-  modalCaption.style.display = caption ? "block" : "none";
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -35,8 +29,7 @@ document.querySelectorAll(".gallery-item a").forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const img = link.querySelector("img");
-    const caption = link.getAttribute("data-title");
-    openModal(link.href, img ? img.alt : "", caption);
+    openModal(link.href, img ? img.alt : "");
   });
 });
 
