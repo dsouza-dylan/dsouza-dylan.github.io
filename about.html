@@ -8,8 +8,19 @@
     <title>About | Dylan Dsouza</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌊%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+            <filter id="hand-drawn-rule" x="-5%" y="-50%" width="110%" height="200%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" result="noise" seed="8"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
     <header>
         <div class="header-container">
             <button class="hamburger" id="hamburger">&#9776;</button>
@@ -43,15 +54,16 @@
 
     <main class="about-container page-fade">
         <section class="about-text">
-        <h2 class="about-header">Hi, I'm Dylan.</h2>
+          <h2 class="about-header">Hi, I'm Dylan.</h2>
           <p>I'm an undergraduate data science student at UC San Diego, inspired by the natural world and how we interpret it through data. My work focuses on the intersection of science, storytelling, and computation, and I find myself particularly drawn to patterns in nature.</p>
-
           <p>I tend to gravitate toward problems that sound interesting to me and spark my curiosity, which is why most of my projects are centered around real-world applications.</p>
-
           <p>When I'm not immersed in datasets, you'll often find me hiking or running. Otherwise, expect to see me baking, behind a camera, or winning a game of Catan (very rarely, admittedly).</p>
         </section>
         <section class="about-image">
-          <img src="assets/aboutpic.PNG" alt="Portrait or symbolic image" />
+          <div class="about-postcard">
+            <img src="assets/aboutpic.PNG" alt="Dylan" />
+            <span class="postcard-caption">Discovery Park, WA &mdash; 2026</span>
+          </div>
         </section>
       </main>
 
