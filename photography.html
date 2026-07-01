@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -7,9 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography | Dylan Dsouza</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌊%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+    <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+            <filter id="hand-drawn">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" seed="5"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <filter id="hand-drawn-rule" x="-5%" y="-50%" width="110%" height="200%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" result="noise" seed="8"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
     <header>
         <div class="header-container">
             <button class="hamburger" id="hamburger">&#9776;</button>
@@ -43,57 +58,73 @@
 
     <main class="photography-main page-fade">
         <h2>My Photography</h2>
-        <div class="photo-page-intro">
+        <div class="page-intro">
             <p>I like to document places I've been to and things I've done. Here's a slice of it.</p>
         </div>
 
         <!-- HOME -->
         <section class="photo-section section-home">
-            <div class="photo-section-header">
+            <div class="photo-section-header header-left">
                 <h3>Home</h3>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Bombay</span>
-                <p class="photo-subsection-blurb">The city that shaped me — chaotic, coastal, and impossible to forget.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/bombay-1.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-1.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-l">
+                    <div class="gallery-item">
+                        <a href="photos/bombay-4.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-4.jpg" alt="Bombay" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Bombay</span>
+                            <span class="caption-blurb">The city that shaped me — chaotic, coastal, and impossible to forget.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/bombay-2.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-2.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
+                    <div class="gallery-item"><a href="photos/bombay-1.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-1.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/bombay-3.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-3.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/bombay-4.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-4.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/bombay-5.jpg" data-lightbox="bombay" data-title="Bombay"><img src="photos/bombay-5.jpg" alt="Bombay" loading="lazy" decoding="async"></a></div>
                 </div>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Scripps Oceanography</span>
-                <p class="photo-subsection-blurb">Where I do my best thinking — my home away from home.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/sio-4.jpg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-4.jpg" alt="SIO" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-r">
+                    <div class="gallery-item">
+                        <a href="photos/sio-1.jpeg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-1.jpeg" alt="SIO" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Scripps Oceanography</span>
+                            <span class="caption-blurb">Where I do my best thinking — my home away from home.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/sio-5.jpeg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-5.jpeg" alt="SIO" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/sio-1.jpeg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-1.jpeg" alt="SIO" loading="lazy" decoding="async"></a></div>
+                    <div class="gallery-item"><a href="photos/sio-4.jpg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-4.jpg" alt="SIO" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/sio-3.jpg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-3.jpg" alt="SIO" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/sio-2.jpg" data-lightbox="sio" data-title="SIO"><img src="photos/sio-2.jpg" alt="SIO" loading="lazy" decoding="async"></a></div>
                 </div>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">UCSD</span>
-                <p class="photo-subsection-blurb">Growing on me, one late night walk at a time.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/ucsd-4.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-4.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-l">
+                    <div class="gallery-item">
+                        <a href="photos/ucsd-3.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-3.jpg" alt="UCSD" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">UCSD</span>
+                            <span class="caption-blurb">Growing on me, one late night walk at a time.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/ucsd-2.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-2.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/ucsd-3.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-3.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
+                    <div class="gallery-item"><a href="photos/ucsd-4.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-4.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/ucsd-5.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-5.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/ucsd-1.jpg" data-lightbox="ucsd" data-title="UCSD"><img src="photos/ucsd-1.jpg" alt="UCSD" loading="lazy" decoding="async"></a></div>
                 </div>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">San Diego</span>
-                <p class="photo-subsection-blurb">A city I'm slowly learning to call home.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/sd-4.JPG" data-lightbox="san-diego" data-title="San Diego"><img src="photos/sd-4.JPG" alt="San Diego" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-r">
+                    <div class="gallery-item">
+                        <a href="photos/sd-4.JPG" data-lightbox="san-diego" data-title="San Diego"><img src="photos/sd-4.JPG" alt="San Diego" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">San Diego</span>
+                            <span class="caption-blurb">A city I'm slowly learning to call home.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/sd-1.JPG" data-lightbox="san-diego" data-title="San Diego"><img src="photos/sd-1.JPG" alt="San Diego" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/sd-2.jpeg" data-lightbox="san-diego" data-title="San Diego"><img src="photos/sd-2.jpeg" alt="San Diego" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/sd-3.JPG" data-lightbox="san-diego" data-title="San Diego"><img src="photos/sd-3.JPG" alt="San Diego" loading="lazy" decoding="async"></a></div>
@@ -104,27 +135,35 @@
 
         <!-- AWAY -->
         <section class="photo-section section-away">
-            <div class="photo-section-header">
+            <div class="photo-section-header header-center">
                 <h3>Away</h3>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">New York City</span>
-                <p class="photo-subsection-blurb">Loud, fast, and somehow familiar.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/nyc-4.jpg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-4.jpg" alt="NYC" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-l">
+                    <div class="gallery-item">
+                        <a href="photos/nyc-5.jpg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-5.jpg" alt="NYC" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">New York City</span>
+                            <span class="caption-blurb">Loud, fast, and somehow familiar.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/nyc-2.jpeg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-2.jpeg" alt="NYC" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/nyc-1.jpg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-1.jpg" alt="NYC" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/nyc-5.jpg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-5.jpg" alt="NYC" loading="lazy" decoding="async"></a></div>
+                    <div class="gallery-item"><a href="photos/nyc-4.jpg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-4.jpg" alt="NYC" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/nyc-3.jpeg" data-lightbox="nyc" data-title="New York City"><img src="photos/nyc-3.jpeg" alt="NYC" loading="lazy" decoding="async"></a></div>
                 </div>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Seattle</span>
-                <p class="photo-subsection-blurb">If I was a city, I'd probably be Seattle.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/seattle-5.JPG" data-lightbox="seattle" data-title="Seattle"><img src="photos/seattle-5.JPG" alt="Seattle" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-r">
+                    <div class="gallery-item">
+                        <a href="photos/seattle-5.JPG" data-lightbox="seattle" data-title="Seattle"><img src="photos/seattle-5.JPG" alt="Seattle" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Seattle</span>
+                            <span class="caption-blurb">If I was a city, I'd probably be Seattle.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/seattle-4.JPG" data-lightbox="seattle" data-title="Seattle"><img src="photos/seattle-4.JPG" alt="Seattle" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/seattle-2.JPG" data-lightbox="seattle" data-title="Seattle"><img src="photos/seattle-2.JPG" alt="Seattle" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/seattle-1.JPG" data-lightbox="seattle" data-title="Seattle"><img src="photos/seattle-1.JPG" alt="Seattle" loading="lazy" decoding="async"></a></div>
@@ -135,16 +174,20 @@
 
         <!-- WILD -->
         <section class="photo-section section-wild">
-            <div class="photo-section-header">
+            <div class="photo-section-header header-right">
                 <h3>The Wild</h3>
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Anza Borrego</span>
-                <p class="photo-subsection-blurb">Bring a blanket. Bring food. Trust me.</p>
-                <div class="gallery-grid">
+                <div class="gallery-grid layout-l">
+                    <div class="gallery-item">
+                        <a href="photos/anza-2.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-2.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Anza Borrego</span>
+                            <span class="caption-blurb">Bring a blanket. Bring food. Trust me.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/anza-1.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-1.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/anza-2.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-2.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/anza-3.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-3.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/anza-4.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-4.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/anza-5.jpeg" data-lightbox="anza" data-title="Anza Borrego"><img src="photos/anza-5.jpeg" alt="Anza Borrego" loading="lazy" decoding="async"></a></div>
@@ -152,10 +195,14 @@
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Torrey Pines</span>
-                <p class="photo-subsection-blurb">Effortlessly relaxing, whenever I need it.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/torrey-1.jpeg" data-lightbox="torrey" data-title="Torrey Pines"><img src="photos/torrey-1.jpeg" alt="Torrey Pines" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-r">
+                    <div class="gallery-item">
+                        <a href="photos/torrey-1.jpeg" data-lightbox="torrey" data-title="Torrey Pines"><img src="photos/torrey-1.jpeg" alt="Torrey Pines" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Torrey Pines</span>
+                            <span class="caption-blurb">Effortlessly relaxing, whenever I need it.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/torrey-2.jpeg" data-lightbox="torrey" data-title="Torrey Pines"><img src="photos/torrey-2.jpeg" alt="Torrey Pines" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/torrey-3.jpeg" data-lightbox="torrey" data-title="Torrey Pines"><img src="photos/torrey-3.jpeg" alt="Torrey Pines" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/torrey-4.jpeg" data-lightbox="torrey" data-title="Torrey Pines"><img src="photos/torrey-4.jpeg" alt="Torrey Pines" loading="lazy" decoding="async"></a></div>
@@ -164,10 +211,14 @@
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Los Peñasquitos Canyon Preserve</span>
-                <p class="photo-subsection-blurb">One of the waterfalls of the world.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/penasquitos-1.JPG" data-lightbox="penasquitos" data-title=""><img src="photos/penasquitos-1.JPG" alt="Los Peñasquitos" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-l">
+                    <div class="gallery-item">
+                        <a href="photos/penasquitos-1.JPG" data-lightbox="penasquitos" data-title="Los Peñasquitos"><img src="photos/penasquitos-1.JPG" alt="Los Peñasquitos" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Los Peñasquitos</span>
+                            <span class="caption-blurb">One of the waterfalls of the world.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/penasquitos-2.JPG" data-lightbox="penasquitos" data-title=""><img src="photos/penasquitos-2.JPG" alt="Los Peñasquitos" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/penasquitos-3.jpeg" data-lightbox="penasquitos" data-title=""><img src="photos/penasquitos-3.jpeg" alt="Los Peñasquitos" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/penasquitos-4.jpeg" data-lightbox="penasquitos" data-title=""><img src="photos/penasquitos-4.jpeg" alt="Los Peñasquitos" loading="lazy" decoding="async"></a></div>
@@ -176,14 +227,18 @@
             </div>
 
             <div class="photo-subsection">
-                <span class="photo-subsection-label">Discovery Park</span>
-                <p class="photo-subsection-blurb">Found this by accident. Couldn't believe it was real.</p>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><a href="photos/discovery-1.JPG" data-lightbox="discovery" data-title=""><img src="photos/discovery-1.JPG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
+                <div class="gallery-grid layout-r">
+                    <div class="gallery-item">
+                        <a href="photos/discovery-5.PNG" data-lightbox="discovery" data-title="Discovery Park"><img src="photos/discovery-5.PNG" alt="Discovery Park" loading="lazy" decoding="async"></a>
+                        <div class="gallery-caption">
+                            <span class="caption-place">Discovery Park</span>
+                            <span class="caption-blurb">Found this by accident. Couldn't believe it was real.</span>
+                        </div>
+                    </div>
                     <div class="gallery-item"><a href="photos/discovery-2.JPG" data-lightbox="discovery" data-title=""><img src="photos/discovery-2.JPG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/discovery-3.JPG" data-lightbox="discovery" data-title=""><img src="photos/discovery-3.JPG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
                     <div class="gallery-item"><a href="photos/discovery-4.PNG" data-lightbox="discovery" data-title=""><img src="photos/discovery-4.PNG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
-                    <div class="gallery-item"><a href="photos/discovery-5.PNG" data-lightbox="discovery" data-title=""><img src="photos/discovery-5.PNG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
+                    <div class="gallery-item"><a href="photos/discovery-1.JPG" data-lightbox="discovery" data-title=""><img src="photos/discovery-1.JPG" alt="Discovery Park" loading="lazy" decoding="async"></a></div>
                 </div>
             </div>
         </section>
@@ -204,9 +259,6 @@
                 <a href="https://dylanblogs.medium.com" target="_blank" class="social-icon">
                     <i class="fab fa-medium"></i> Medium
                 </a>
-                <a href="https://www.flickr.com/photos/202670057@N08/" target="_blank" class="social-icon">
-                    <i class="fab fa-flickr"></i> Flickr
-                </a>
             </div>
         </div>
     </footer>
@@ -214,4 +266,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
