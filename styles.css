@@ -283,6 +283,7 @@ footer p {
   line-height: 1.7;
 }
 
+
 .photo-page-intro {
   max-width: 800px;
   margin: 0 0 3rem;
@@ -299,6 +300,8 @@ footer p {
   border-top: none;
   border-radius: 0;
   background: transparent;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1200px;
 }
 
 .section-home, .section-away, .section-wild, .section-other {
@@ -590,13 +593,66 @@ footer p {
 
 .gallery-caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2.5rem 1.2rem 1.2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  inset: 0;
+  padding: 1.2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 40%, transparent 100%);
   pointer-events: none;
   z-index: 1;
+}
+
+.gallery-caption .caption-place {
+  position: absolute;
+  bottom: 3.4rem;
+  left: 1.2rem;
+}
+
+.gallery-caption .caption-blurb {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-caption .caption-place {
+    bottom: auto;
+    top: auto;
+    position: relative;
+    left: auto;
+  }
+
+  .gallery-caption .caption-blurb {
+    bottom: auto;
+    position: relative;
+    left: auto;
+  }
+
+  .gallery-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem 1rem 1rem;
+  }
+
+  .gallery-caption iframe {
+    width: 220px;
+    height: 152px;
+    transform: scale(0.65) translateZ(0);
+    transform-origin: top right;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+.gallery-caption iframe {
+  pointer-events: auto;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 350px;
+  height: 152px;
+  transform: scale(0.65) translateZ(0);
+  transform-origin: top right;
+  will-change: transform;
 }
 
 .caption-place {
@@ -1431,9 +1487,12 @@ body {
   flex-wrap: wrap;
 }
 
-.about-text {
+.about-left {
   flex: 1;
   min-width: 300px;
+}
+
+.about-text {
   background-color: #f4f4f4;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #333;
@@ -1442,7 +1501,7 @@ body {
 .about-text h2 {
   font-family: 'Sofia Sans', sans-serif;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   text-align: left;
   color: #1a1a1a;
 }
@@ -1457,9 +1516,12 @@ body {
   flex: 1;
   min-width: 280px;
   max-width: 480px;
-  align-self: center;
+  align-self: flex-start;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 80px;
 }
 
 .about-postcard {
@@ -1495,6 +1557,124 @@ body {
   text-align: center;
 }
 
+.about-contact-links {
+  margin-top: 1.5rem;
+}
+
+/* ── Experience Timeline ── */
+.experience-timeline {
+  background: #f4f4f4;
+  padding-top: 1rem;
+}
+
+.timeline-heading {
+  font-family: 'Sofia Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ddd;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.03em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+
+.timeline-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.timeline-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  flex: 1;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.timeline-present {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.timeline-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.timeline-role {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.timeline-date {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.timeline-company {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.83rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-card-header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column-reverse;
@@ -1503,26 +1683,53 @@ body {
     align-items: center;
   }
 
-  .about-text, .about-image {
+  .about-left {
     width: 100%;
     max-width: 100%;
-    text-align: center;
+    min-width: 0;
   }
 
-  .about-header {
-    order: -1;
-  }
-
-  .about-text h2 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .about-image img {
+  .about-image {
     width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
+    max-width: 420px;
+    min-width: 0;
+    position: static;
+    text-align: center;
+  }
+
+  .about-postcard {
+    transform: none;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-postcard:hover {
+    transform: none;
+  }
+
+  .about-text h2,
+  .timeline-heading {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  .timeline-date {
+    white-space: normal;
+  }
+
+  .timeline-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 0.6rem;
+  }
+
+  .timeline::before {
+    left: 22px;
   }
 }
 

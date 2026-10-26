@@ -82,6 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealEls.forEach(el => observer.observe(el));
 
+  // --- Lazy load Spotify embeds ---
+  const spotifyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const iframe = entry.target;
+        iframe.src = iframe.dataset.src;
+        spotifyObserver.unobserve(iframe);
+      }
+    });
+  }, { rootMargin: "200px" });
+
+  document.querySelectorAll("iframe[data-src]").forEach(el => spotifyObserver.observe(el));
+
   // --- Back to top button ---
   const backToTop = document.createElement("button");
   backToTop.className = "back-to-top";
